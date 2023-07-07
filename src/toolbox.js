@@ -6,7 +6,9 @@ const toolBox={
       {'kind':'block','type':'controls_for'},
       {'kind':'block','type':'controls_if'},
       {'kind':'block','type':'controls_repeat'},
-      {'kind':'block','type':'controls_whileUntil'}
+      {'kind':'block','type':'controls_whileUntil'},
+      {'kind':'block','type':'controls_wait'},
+      {'kind':'block','type':'controls_prepare'}
     ]},{'kind':'category','name':'演算','contents':[
       {'kind':'block','type':'math_arithmetic'},
       {'kind':'block','type':'math_atan2'},
@@ -45,7 +47,7 @@ const toolBox={
       {'kind':'block','type':'text_trim'},
     ]},{'kind':'category','name':'動き','contents':[
       {'kind':'block','type':'move_to'},
-      {'kind':'block','type':'move_prepare'}
+      {'kind':'block','type':'move_x_to'}
     ]}
   ]
 };
