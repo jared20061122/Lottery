@@ -47,7 +47,8 @@ const toolBox={
       {'kind':'block','type':'text_trim'},
     ]},{'kind':'category','name':'動き','contents':[
       {'kind':'block','type':'move_to'},
-      {'kind':'block','type':'move_x_to'}
+      {'kind':'block','type':'move_x_to'},
+      {'kind':'block','type':'move_y_to'}
     ]}
   ]
 };

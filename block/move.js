@@ -34,6 +34,13 @@ Blockly.defineBlocksWithJsonArray([{
   'nextStatement':null,
   'message0':'x座標を %1 に変える',
   'args0':[{'type':'field_number','name':'X'}]
+},{
+  'type':'move_y_to',
+  'colour':'360',
+  'previousStatement':null,
+  'nextStatement':null,
+  'message0':'y座標を %1 に変える',
+  'args0':[{'type':'field_number','name':'Y'}]
 }]);
 
 Blockly.JavaScript['move_to']=function(block){
@@ -42,11 +49,16 @@ Blockly.JavaScript['move_to']=function(block){
   const code='moveTo('+X+','+Y+');';
   return code;
 };
-Blockly.JavaScript.move_x_to=function(block){
+Blockly.JavaScript['move_x_to']=function(block){
   const X=block.getFieldValue('X');
   const code='moveTo('+X+',null);'
   return code;
 };
+Blockly.JavaScript['move_y_to']=function(block){
+  const Y=block.getFieldValue('Y');
+  const code='moveTo(null,'+Y+');';
+  return code
+}
 Blockly.JavaScript['controls_wait']=function(block){
   const time=block.getFieldValue('X');
   const code='syncDelay('+time*1000+');';
