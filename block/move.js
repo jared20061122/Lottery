@@ -61,7 +61,7 @@ Blockly.JavaScript['move_y_to']=function(block){
 }
 Blockly.JavaScript['controls_wait']=function(block){
   const time=block.getFieldValue('X');
-  const code='wait('+time*1000+');';
+  const code='sleep('+time*1000+');';
   return code;
 }
 Blockly.JavaScript['controls_prepare']=function(block){
