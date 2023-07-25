@@ -61,11 +61,11 @@ Blockly.JavaScript['move_y_to']=function(block){
 }
 Blockly.JavaScript['controls_wait']=function(block){
   const time=block.getFieldValue('X');
-  const code='syncDelay('+time*1000+');';
+  const code='await wait('+time*1000+');';
   return code;
 }
 Blockly.JavaScript['controls_prepare']=function(block){
   return `function moveTo(x=null,y=null){const img = document.getElementById("img"); img.style.position = "absolute";
   if(x!==null){img.style.top = Math.min(180.5,Math.max(0,x))+"px";}if(y!==null){img.style.left = Math.min(270.5,Math.max(0,y))+"px";}}
-function syncDelay(milliseconds){var start = new Date().getTime();var end=0;while( (end-start) < milliseconds){end = new Date().getTime();}}`
+const wait = async (ms) => new Promise(resolve => setTimeout(resolve, ms))`
 }
