@@ -67,5 +67,5 @@ Blockly.JavaScript['controls_wait']=function(block){
 Blockly.JavaScript['controls_prepare']=function(block){
   return `function moveTo(x=null,y=null){const img = document.getElementById("img"); img.style.position = "absolute";
   if(x!==null){img.style.top = Math.min(180.5,Math.max(0,x))+"px";}if(y!==null){img.style.left = Math.min(270.5,Math.max(0,y))+"px";}}
-function sleep(waitMsec) {var startMsec = new Date();while (new Date() - startMsec < waitMsec);}`
+function sleep(waitMsec) {let startMsec = new Date();while (new Date() - startMsec < waitMsec);}`
 }
